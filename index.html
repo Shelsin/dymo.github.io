@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="description"
-        content="Step-aware Preference Optimization: Aligning Preference with Denoising Performance at Each Step">
+        content="DyMO: Training-Free Diffusion Model Alignment with Dynamic Multi-Objective Scheduling">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Step-aware Preference Optimization: Aligning Preference with Denoising Performance at Each Step</title>
+    <title>DyMO: Training-Free Diffusion Model Alignment with Dynamic Multi-Objective Scheduling</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -197,30 +197,13 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 ">Step-aware Preference Optimization: Aligning Preference with Denoising
-                            Performance at Each Step</h1>
+                        <h1 class="title is-1 ">DyMO: Training-Free Diffusion Model Alignment with Dynamic Multi-Objective Scheduling</h1>
                         <div class="is-size-5 publication-authors">
                             <span class="author-block">
-                                <a href="https://github.com/RockeyCoss">Zhanhao Liang</a>&nbsp&nbsp&nbsp
+                                <a href="https://shelsin.github.io/">Xin Xie</a>&nbsp&nbsp&nbsp
                             </span>
                             <span class="author-block">
-                                <a href="https://www.microsoft.com/en-us/research/people/yuyua/">Yuhui
-                                    Yuan</a><sup></sup>&nbsp&nbsp&nbsp
-                            </span>
-                            <span class="author-block">
-                                <a href="https://cientgu.github.io">Shuyang Gu</a><sup></sup>&nbsp&nbsp&nbsp
-                            </span>
-                            <span class="author-block">
-                                <a href="https://github.com/BHCHENGIT">Bohan Chen</a><sup></sup>&nbsp&nbsp&nbsp
-                            </span>
-                            <span class="author-block">
-                                <a href="https://tiankaihang.github.io/">Tiankai Hang</a><sup></sup>&nbsp&nbsp&nbsp
-                            </span>
-                            <span class="author-block">
-                                <a href="https://sites.google.com/a/usc.edu/jili/">Ji Li</a><sup></sup>&nbsp&nbsp&nbsp
-                            </span>
-                            <span class="author-block">
-                                <a href="https://zheng-lab.cecs.anu.edu.au/">Liang Zheng</a><sup></sup>
+                                <a href="https://donggong1.github.io/">Dong Gong</a><sup></sup>
                             </span>
                             <!-- <br>
             <span class="is-size-6 publication-authors">
@@ -235,19 +218,14 @@
                         </div>
 
                         <div class="is-size-5 publication-authors">
-                            <span class="author-block"><sup> </sup>The Australian National
-                                University&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-                            <span class="author-block"><sup> </sup>The University of
-                                Liverpool&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-                            <span class="author-block"><sup> </sup>Southeast University</span>
-                            <span class="author-block"><sup> </sup>Microsoft Research Asia</span>
+                            <span class="author-block"><sup> </sup>University of New South Wales (UNSW Sydney)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
                         </div>
 
                         <div class="column has-text-centered">
                             <div class="publication-links">
                                 <span class="link-block">
                                     <!-- TODO: add arxiv link -->
-                                    <a href="https://arxiv.org/abs/2406.04314" class="external-link button is-normal is-rounded is-dark">
+                                    <a href="https://arxiv.org/abs/24xx.xxxxx" class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="ai ai-arxiv"></i>
                                         </span>
@@ -255,7 +233,7 @@
                                     </a>
                                 </span>
                                 <span class="link-block">
-                                    <a href="https://github.com/RockeyCoss/SPO"
+                                    <a href="https://github.com/Shelsin/DyMO"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
@@ -264,12 +242,12 @@
                                     </a>
                                 </span>
                                 <span class="link-block">
-                                  <a href="https://huggingface.co/SPO-Diffusion-Models"
+                                  <a href="https://www.youtube.com/watch?v=01roEfaFnmY"
                                       class="external-link button is-normal is-rounded is-dark">
                                       <span class="icon">
-                                        🤗
+                                        😊
                                       </span>
-                                      <span>Hugging Face</span>
+                                      <span>YouTube</span>
                                   </a>
                               </span>
                             </div>
@@ -279,7 +257,7 @@
             </div>
     </section>
 
-
+    <!--
     <section class="section">
         <div class="container is-max-desktop">
             <div class="columns is-vcentered interpolation-panel">
@@ -406,7 +384,8 @@
     </section>
     <br>
     <br>
-
+-->
+    
     <section class="section">
         <div class="container is-max-desktop">
             <!-- Abstract. -->
@@ -414,31 +393,14 @@
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
-                        <p>
-                            Recently, Direct Preference Optimization (DPO) has extended its success from aligning large
-                            language models (LLMs) to aligning text-to-image diffusion models with human preferences.
-                            Unlike most existing DPO methods that assume all diffusion steps share a consistent
-                            preference order with the final generated images, we argue that this assumption neglects
-                            step-specific denoising performance and that preference labels should be tailored to each
-                            step's contribution.
+                        <p>  
+                            Text-to-image diffusion model alignment is critical for improving the alignment between the generated images and human preferences. While training-based methods are constrained by high computational costs and dataset requirements, training-free alignment methods remain underexplored and are often limited by inaccurate guidance. 
                         </p>
                         <p>
-                            To address this limitation, we propose Step-aware Preference Optimization (SPO), a novel
-                            post-training approach that independently evaluates and adjusts the denoising performance at
-                            each step, using a <em>step-aware preference model</em> and a <em>step-wise resampler</em>
-                            to ensure accurate step-aware supervision.
-                            Specifically, at each denoising step, we sample a pool of images, find a suitable win-lose
-                            pair, and, most importantly, randomly select a single image from the pool to initialize the
-                            next denoising step. This step-wise resampler process ensures the next win-lose image pair
-                            comes from the same image, making the win-lose comparison independent of the previous step.
-                            To assess the preferences at each step, we train a separate step-aware preference model that
-                            can be applied to both noisy and clean images.
+                            We propose a plug-and-play training-free alignment method, DyMO, for aligning the generated images and human preferences during inference. Apart from text-aware human preference scores, we introduce a semantic alignment objective for enhancing the semantic alignment in the early stages of diffusion, relying on the fact that the attention maps are effective reflections of the semantics in noisy images. We propose dynamic scheduling of multiple objectives and intermediate recurrent steps to reflect the requirements at different steps.
                         </p>
                         <p>
-                            Our experiments with Stable Diffusion v1.5 and SDXL demonstrate that SPO significantly
-                            outperforms the latest Diffusion-DPO in aligning generated images with complex, detailed
-                            prompts and enhancing aesthetics, while also achieving more than 20&times; times faster in
-                            training efficiency.
+                            Experiments with diverse pre-trained diffusion models and metrics demonstrate the effectiveness and robustness of the proposed method.
                         </p>
                     </div>
                 </div>
@@ -451,281 +413,10 @@
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
                 <h2 class="title is-3">Method Overview</h2>
-                <img src="./static/assets/method/architech.png" alt="pipeline" style="width: 80%;">
+                <img src="./static/assets/method/framework.png" alt="pipeline" style="width: 80%;">
             </div>
         </div>
 
-        <br>
-
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Quantitative Results</h2>
-                <div class="table-container">
-                    <table>
-                        <caption>Comparison of AI feedback metrics on SDXL.</caption>
-                        <tr>
-                            <th>Method</th>
-                            <th>PickScore</th>
-                            <th>HPSV2</th>
-                            <th>ImageReward</th>
-                            <th>Aesthetic</th>
-                        </tr>
-                        <tr>
-                            <td>SDXL</td>
-                            <td>21.95</td>
-                            <td>26.95</td>
-                            <td>0.5380</td>
-                            <td>5.950</td>
-                        </tr>
-                        <tr>
-                            <td>Diff.-DPO</td>
-                            <td>22.64</td>
-                            <td>29.31</td>
-                            <td>0.9436</td>
-                            <td>6.015</td>
-                        </tr>
-                        <tr class="highlight">
-                            <td class="underline">SPO</td>
-                            <td class="underline">23.06</td>
-                            <td class="underline">31.80</td>
-                            <td class="underline">1.0803</td>
-                            <td class="underline">6.364</td>
-                        </tr>
-                    </table>
-
-                    <table>
-                        <caption>Comparison of AI feedback metrics on SD-1.5.</caption>
-                        <tr>
-                            <th>Method</th>
-                            <th>PickScore</th>
-                            <th>HPSV2</th>
-                            <th>ImageReward</th>
-                            <th>Aesthetic</th>
-                        </tr>
-                        <tr>
-                            <td>SD-1.5</td>
-                            <td>20.53</td>
-                            <td>23.79</td>
-                            <td>-0.1628</td>
-                            <td>5.365</td>
-                        </tr>
-                        <tr>
-                            <td>DDPO</td>
-                            <td>21.06</td>
-                            <td>24.91</td>
-                            <td>0.0817</td>
-                            <td>5.591</td>
-                        </tr>
-                        <tr>
-                            <td>D3PO</td>
-                            <td>20.76</td>
-                            <td>23.97</td>
-                            <td>-0.1235</td>
-                            <td>5.527</td>
-                        </tr>
-                        <tr>
-                            <td>Diff.-DPO</td>
-                            <td>20.98</td>
-                            <td>25.05</td>
-                            <td>0.1115</td>
-                            <td>5.505</td>
-                        </tr>
-                        <tr class="highlight">
-                            <td class="underline">SPO</td>
-                            <td class="underline">21.43</td>
-                            <td class="underline">26.45</td>
-                            <td class="underline">0.1712</td>
-                            <td class="underline">5.887</td>
-                        </tr>
-                    </table>
-                </div>
-                <img src="./static/assets/results/SPO_vs_DPO_winrate.png" alt="pipeline" style="width: 80%;">
-                <img src="./static/assets/results/SPO_vs_DPO_hpsv2_winrate.png" alt="pipeline" style="width: 80%;">
-                <br>
-                <caption>User study results comparing SPO and Diffusion-DPO based on SDXL.</caption>
-                <br>
-
-            </div>
-        </div>
-
-        <br>
-
-        <h2 class="title is-3" style="text-align: center;">Qualitative Results</h2>
-        <h3 class="title is-4" style="text-align: center;">Comparison between Diffusion-DPO and SPO based on SDXL</h2>
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-                    <div class="columns is-centered">
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/ddpo1.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">Diffusion-DPO-SDXL</p>
-                        </div>
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/spo1.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">SPO-SDXL</p>
-                        </div>
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/ddpo2.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">Diffusion-DPO-SDXL</p>
-                        </div>
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/spo2.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">SPO-SDXL</p>
-                        </div>
-                    </div>
-
-                    <div class="columns is-centered">
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/ddpo3.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">Diffusion-DPO-SDXL</p>
-                        </div>
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/spo3.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">SPO-SDXL</p>
-                        </div>
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/ddpo4.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">Diffusion-DPO-SDXL</p>
-                        </div>
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/spo4.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">SPO-SDXL</p>
-                        </div>
-                    </div>
-
-                    <div class="columns is-centered">
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/ddpo5.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">Diffusion-DPO-SDXL</p>
-                        </div>
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/spo5.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">SPO-SDXL</p>
-                        </div>
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/ddpo6.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">Diffusion-DPO-SDXL</p>
-                        </div>
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/spo6.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">SPO-SDXL</p>
-                        </div>
-                    </div>
-
-                    <div class="columns is-centered">
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/ddpo7.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">Diffusion-DPO-SDXL</p>
-                        </div>
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/spo7.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">SPO-SDXL</p>
-                        </div>
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/ddpo8.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">Diffusion-DPO-SDXL</p>
-                        </div>
-                        <div class="column is-2 ">
-                            <img src="./static/assets/visual_com/spo8.png" class="interpolation-image"
-                                alt="Interpolate start reference image." />
-                            <p style="text-align: center;">SPO-SDXL</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-
-            <h3 class="title is-4" style="text-align: center;">More Visual Results</h2>
-                <br>
-                <div class="container is-max-desktop">
-                    <div class="columns is-vcentered interpolation-panel">
-                        <div class="columns is-centered">
-                            <div class="column is-3 ">
-                                <img src="./static/assets/more_visual/0.png" class="interpolation-image"
-                                    alt="Interpolate start reference image." />
-                                <p></p>
-                            </div>
-                            <div class="column is-3 ">
-                                <img src="./static/assets/more_visual/1.png" class="interpolation-image"
-                                    alt="Interpolate start reference image." />
-                                <p></p>
-                            </div>
-                            <div class="column is-3 ">
-                                <img src="./static/assets/more_visual/2.png" class="interpolation-image"
-                                    alt="Interpolate start reference image." />
-                                <p></p>
-                            </div>
-                            <div class="column is-3 ">
-                                <img src="./static/assets/more_visual/3.png" class="interpolation-image"
-                                    alt="Interpolate start reference image." />
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns is-vcentered interpolation-panel">
-                        <div class="columns is-centered">
-                            <div class="column is-3 ">
-                                <img src="./static/assets/more_visual/4.png" class="interpolation-image"
-                                    alt="Interpolate start reference image." />
-                                <p></p>
-                            </div>
-                            <div class="column is-3 ">
-                                <img src="./static/assets/more_visual/5.png" class="interpolation-image"
-                                    alt="Interpolate start reference image." />
-                                <p></p>
-                            </div>
-                            <div class="column is-3 ">
-                                <img src="./static/assets/more_visual/6.png" class="interpolation-image"
-                                    alt="Interpolate start reference image." />
-                                <p></p>
-                            </div>
-                            <div class="column is-3 ">
-                                <img src="./static/assets/more_visual/7.png" class="interpolation-image"
-                                    alt="Interpolate start reference image." />
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns is-vcentered interpolation-panel">
-                        <div class="columns is-centered">
-                            <div class="column is-3 ">
-                                <img src="./static/assets/more_visual/8.png" class="interpolation-image"
-                                    alt="Interpolate start reference image." />
-                                <p></p>
-                            </div>
-                            <div class="column is-3 ">
-                                <img src="./static/assets/more_visual/9.png" class="interpolation-image"
-                                    alt="Interpolate start reference image." />
-                                <p></p>
-                            </div>
-                            <div class="column is-3 ">
-                                <img src="./static/assets/more_visual/10.png" class="interpolation-image"
-                                    alt="Interpolate start reference image." />
-                                <p></p>
-                            </div>
-                            <div class="column is-3 ">
-                                <img src="./static/assets/more_visual/11.png" class="interpolation-image"
-                                    alt="Interpolate start reference image." />
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
     </section>
     <br>
     <br>
@@ -735,10 +426,10 @@
         <div class="container is-max-desktop content">
             <h2 class="title">BibTeX</h2>
             <pre><code>
-@article{liang2024step,
-  title={Step-aware Preference Optimization: Aligning Preference with Denoising Performance at Each Step},
-  author={Liang, Zhanhao and Yuan, Yuhui and Gu, Shuyang and Chen, Bohan and Hang, Tiankai and Li, Ji and Zheng, Liang},
-  journal={arXiv preprint arXiv:2406.04314},
+@article{xin2024dymo,
+  title={DyMO: Training-Free Diffusion Model Alignment with Dynamic Multi-Objective Scheduling},
+  author={Xie, Xin and Gong, Dong},
+  journal={arXiv preprint arXiv:24xx.xxxxx},
   year={2024}
 }
             </code></pre>
