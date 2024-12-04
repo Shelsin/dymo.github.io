@@ -474,9 +474,10 @@
 
     <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-        <h2 class="title is-3">Table 1. Comparison of AI feedback on SD V1.5-based methods</h2>
+        <h2 class="title is-3">Quantitative Results</h2>
         <div class="table-container">
             <table>
+                <caption>Comparison of AI feedback on SD V1.5-based methods.</caption>
                 <thead>
                     <tr>
                         <th>Methods</th>
@@ -553,6 +554,101 @@
                 </tbody>
             </table>
         </div>
+
+        <div class="table-container">
+            <table>
+                <caption>Comparison of AI feedback on SDXL-based methods.</caption>
+                <thead>
+                    <tr>
+                        <th>Methods</th>
+                        <th>PickScore</th>
+                        <th>HPSv2</th>
+                        <th>ImageReward</th>
+                        <th>Aesthetics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SDXL</td>
+                        <td>21.91</td>
+                        <td>0.2602</td>
+                        <td>0.7755</td>
+                        <td>5.960</td>
+                    </tr>
+                    <tr>
+                        <td>DNO</td>
+                        <td>22.14</td>
+                        <td>0.2725</td>
+                        <td>0.9053</td>
+                        <td>6.042</td>
+                    </tr>
+                    <tr>
+                        <td>PromptOpt</td>
+                        <td>21.98</td>
+                        <td>0.2708</td>
+                        <td>0.8671</td>
+                        <td>5.881</td>
+                    </tr>
+                    <tr>
+                        <td>FreeDom</td>
+                        <td>22.13</td>
+                        <td>0.2719</td>
+                        <td>0.7722</td>
+                        <td>5.908</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>SDXL+Ours</td>
+                        <td><b>24.90</b></td>
+                        <td><b>0.2839</b></td>
+                        <td><b>1.074</b></td>
+                        <td><b>6.138</b></td>
+                    </tr>
+                    <tr>
+                        <td>Diffusion-DPO</td>
+                        <td>22.30</td>
+                        <td>0.2741</td>
+                        <td>0.9789</td>
+                        <td>5.891</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Diff-DPO+Ours</td>
+                        <td><b>24.46</b></td>
+                        <td><b>0.2836</b></td>
+                        <td><b>1.049</b></td>
+                        <td><b>6.116</b></td>
+                    </tr>
+                    <tr>
+                        <td>SPO</td>
+                        <td>22.81</td>
+                        <td>0.2778</td>
+                        <td>1.082</td>
+                        <td><b>6.319</b></td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>SPO+Ours</td>
+                        <td><b>23.85</b></td>
+                        <td><b>0.2821</b></td>
+                        <td><b>1.166</b></td>
+                        <td><b>6.278</b></td>
+                    </tr>
+                    <tr>
+                        <td>SD V3.5</td>
+                        <td>21.93</td>
+                        <td>0.2726</td>
+                        <td>0.9697</td>
+                        <td>5.775</td>
+                    </tr>
+                    <tr>
+                        <td>FLUX</td>
+                        <td>22.04</td>
+                        <td>0.2760</td>
+                        <td>1.011</td>
+                        <td>6.077</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
     </div>
 </div>
 
