@@ -456,10 +456,14 @@
             <div class="column is-four-fifths">
                 <h2 class="title is-3">Method Overview</h2>
                 <img src="./static/assets/method/framework.png" alt="pipeline" style="width: 80%;">
+                <div class="content has-text-justified">
                 <p>
                     We propose a training-free diffusion model alignment approach relying <strong>Dy</strong>namic scheduling of <strong>M</strong>ultiple <strong>O</strong>bjectives (DyMO). We aim to align the generated images with the user preferences in terms of both the intention in the text input and the appealing visual quality. Relying on the pre-trained differentiable text-aware preference scores as an <em>alignment objective</em>, we guide the denoising process with the gradient computed for the intermediate noisy images in an Score-Based DM formulation. Since the one-step approximation is used for efficiency and the contents are not sufficiently reflected in early-stage noisy images, the preference model cannot provide effective and accurate guidance. We thus propose a semantic <em>alignment objective</em> relying on a discovery that the text-image attention maps are an indirect reflection of the semantic contents (<em>e.g.</em>, the entities and layout). The semantic alignment objective/guidance is used to minimize the discrepancies between the attention-map-based contents and the semantic meanings extracted from the text based on a large-language model (LLM). Considering that the two objectives perform with different importance for different stages, we dynamically schedule two objectives to generate detailed content while keeping the layout.  Additionally, we propose a dynamic recurrent strategy to improve the guidance by automatically deciding the number of iterations at different stages. 
                 </p>
-            </div>
+
+                </div>
+                
+             </div>
         </div>
 
     </section>
